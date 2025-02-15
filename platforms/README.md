@@ -11,6 +11,5 @@ If you don't manage to get this working we'll still want to hear about what you 
 
 > ANSWER BOX
 ```
-// TODO: Fill me in!
-
+I decided on the most appropriate hosting option given the use case, which was EC2. I set up an EC2 micro instance and attached a security group that enabled SSH, HTTP, HTTPS and port 8448 which is used by matrix. I connected to my EC2 instance through SSH. Following the instructions on this resource upcloud.com/resources/tutorials/install-matrix-synapse, I configured Synapse. I needed a subdomain so I obtained one for free from reedns.afraid.org. Then I used certbot to enable TLS. I edited the homeserver.yaml so that my server listens on port 8448 and I enabled the TLS option. After that I used the register_new_matrix_user command with the correct parameters to create an account to message chino from. 
 ```
